@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello! Be welcome to my pre-qualification test.");
+        System.out.println("Hello! Welcome to my pre-qualification test.");
         Main main = new Main();
         while (!main.quit) {
             main.showOptions();

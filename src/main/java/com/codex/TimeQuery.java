@@ -15,10 +15,6 @@ public class TimeQuery {
     static ZonedDateTime localTime;
     static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    /*public TimeQuery() {
-        checkCurrentDateTime();
-    }*/
-
     // Method to fetch the date and time from the server
     public static String fetchTimeFromServer() throws Exception {
         String urlString = "http://worldclockapi.com/api/json/utc/now";
