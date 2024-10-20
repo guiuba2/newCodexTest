@@ -16,3 +16,11 @@
 
 ---
 ><h4>2 - Test if two rectangles intersect</h4>
+
+![image](https://github.com/user-attachments/assets/429935bf-bcb1-4a85-bd7d-8c20219f2808)
+
+---
+
+><h4>3 - Compute the area of intersection between two rectangles</h4>
+
+
