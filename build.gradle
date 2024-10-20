@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.codex'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JSON-java dependency
+    implementation 'org.json:json:20231013' // Latest version at the time of writing
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
