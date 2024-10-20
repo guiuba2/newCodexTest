@@ -3,3 +3,10 @@
 <br>Below are screenshots of questions 1 to 6 for demonstration purposes.  
 <br>The solution to question number 7 (Entity Relationship Diagram) is available right here in the README, a little further down.  
 <br>I hope you like it, I did everything with great dedication and care, thank you! : )</p>
+
+<h4>Menu:</h4>
+
+---
+![image](https://github.com/user-attachments/assets/02f7adf5-70c7-4398-a53b-59bf30c4ea60)
+
+---
