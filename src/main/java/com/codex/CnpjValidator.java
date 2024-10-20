@@ -40,7 +40,7 @@ public class CnpjValidator {
             sum = 0;
             weight = 5;
             for (i = 0; i < 12; i++) {
-                num = (int) (cnpj.charAt(i) - 48);
+                num = cnpj.charAt(i) - 48;
                 sum = sum + (num * weight);
                 weight = (weight == 2) ? 9 : weight - 1;
             }
@@ -51,7 +51,7 @@ public class CnpjValidator {
             sum = 0;
             weight = 6;
             for (i = 0; i < 13; i++) {
-                num = (int) (cnpj.charAt(i) - 48);
+                num = cnpj.charAt(i) - 48;
                 sum = sum + (num * weight);
                 weight = (weight == 2) ? 9 : weight - 1;
             }

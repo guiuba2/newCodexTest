@@ -8,8 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello! Be welcome to my pre-qualification test." +
-                "");
+        System.out.println("Hello! Be welcome to my pre-qualification test.");
         Main main = new Main();
         while (!main.quit) {
             main.showOptions();
@@ -20,14 +19,15 @@ public class Main {
 
     public void showOptions() {
         System.out.println(
-                "Please choose one of the following options:\n" +
-                        "1 - CNPJ validator\n" +
-                        "2 - Test if two rectangles intersect\n" +
-                        "3 - Compute the area of intersection between two rectangles\n" +
-                        "4 - Simple Todo List\n" +
-                        "5 - Rest Client - World Clock\n" +
-                        "6 - Rest Server - World Clock\n" +
-                        "0 - Quit");
+                """
+                        Please choose one of the following options:
+                        1 - CNPJ validator
+                        2 - Test if two rectangles intersect
+                        3 - Compute the area of intersection between two rectangles
+                        4 - Simple Todo List
+                        5 - Rest Client - World Clock
+                        6 - Rest Server - World Clock
+                        0 - Quit""");
         String option = scan.next();
         switch (option) {
             case "1":

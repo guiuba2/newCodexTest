@@ -96,10 +96,7 @@ public class RectangleIntersection {
             return false;
         }
         // Check if one rectangle is completely above or below the other
-        if (rect1.y2 < rect2.y1 || rect2.y2 < rect1.y1) {
-            return false;
-        }
-        // If neither of the above, the rectangles intersect
-        return true;
+        // Otherwise, the rectangles intersect
+        return rect1.y2 >= rect2.y1 && rect2.y2 >= rect1.y1;
     }
 }
