@@ -12,3 +12,7 @@
 ---
 ><h4>1 - CNPJ validator:</h4>
 
+![image](https://github.com/user-attachments/assets/909fd5f1-3b87-42b5-a4ba-46d889d25643)
+
+---
+><h4>2 - Test if two rectangles intersect</h4>
