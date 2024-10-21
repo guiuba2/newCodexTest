@@ -45,7 +45,7 @@
 
 ---
 
-><h4>7 - Entity Relationship Diagram - Simple Order Manager (SQL)</h4>
+><h4>7 - Simple Order Manager System demo, using SQL to create tables with basic configuration</h4>
 
 ![image](https://github.com/user-attachments/assets/14597d32-521e-4492-9fda-1deec8c536cc)
 
@@ -53,5 +53,6 @@
 
 ![image](https://github.com/user-attachments/assets/0e1091a4-478d-4fe1-9994-ae4f7256bf78)
 
+![image](https://github.com/user-attachments/assets/8a5ab84b-a415-4537-8cec-b9f430822f63)
 
 
