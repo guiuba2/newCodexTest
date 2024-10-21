@@ -73,4 +73,14 @@ To list all orders along with the number of items in each order, we can use a JO
 This query joins the Order, Client, and Order_Item tables.<br>
 It groups the results by order and client, counting the number of items in each order using COUNT().<br>
 
+- Important:<br>
+
+Indexes are crucial to improving the performance of queries, especially those that involve JOINs and WHERE conditions. Here are some suggested indexes for this model:<br>
+
+**On Foreign Keys**: Index on **client_id** in the **Order** table.
+Index on **order_id** and **product_id** in the **Order_Item** table.
+
+**Unique Index**: A unique index on **email** in the **Client** table to enforce unique emails.
+
+
 
