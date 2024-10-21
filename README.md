@@ -55,12 +55,16 @@
 
 ![image](https://github.com/user-attachments/assets/8a5ab84b-a415-4537-8cec-b9f430822f63)
 
-- We have three main tables / entities:
+- We have three main tables / entities:<br>
 
 **Client**: Stores client information. A client places orders.<br>
 **Product**: Stores product details. Products are ordered by clients.<br>
 **Order**: Stores orders made by clients. Orders are placed by clients, contain one or more products.<br>
-**Order_Item**: (Join table between Order and Product) Stores the relationship between orders and products (i.e., which products were ordered, and in what quantity).
+**Order_Item**: (Join table between Order and Product) Stores the relationship between orders and products (i.e., which products were ordered, and in what quantity).<br>
+
+- Important:<br>
+One **Client** can place many **Orders** (one to many relationship).<br>
+One **Order** can contain many **Products**, and one **Product** can belong to many **Orders**(many to many relationship).<br>
 
 
 
