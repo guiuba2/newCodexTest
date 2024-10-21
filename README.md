@@ -66,7 +66,11 @@
 One **Client** can place many **Orders** (one to many relationship).<br>
 One **Order** can contain many **Products**, and one **Product** can belong to many **Orders**(many to many relationship).<br>
 
+To list all orders along with the number of items in each order, we can use a JOIN with a GROUP BY and COUNT():
 
+![image](https://github.com/user-attachments/assets/5e84417d-97bb-4806-b607-cb0398f4a4de)
 
+This query joins the Order, Client, and Order_Item tables.<br>
+It groups the results by order and client, counting the number of items in each order using COUNT().<br>
 
 
