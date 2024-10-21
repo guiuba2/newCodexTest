@@ -10,14 +10,25 @@ import java.time.format.DateTimeFormatter;
 
 import org.json.JSONObject;
 
+/**This class queries a server to retrieve the current date and time, for both the
+ * local time zone and UTC, using HttpURLConnection to send an HTTP request to
+ * the server. The request returns a JSON or formatted response, as chosen by the user.
+ * @author Guilherme de Magalhaes Andrade
+ */
+
 public class TimeQuery {
     static ZonedDateTime utcTime;
     static ZonedDateTime localTime;
     static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    // Method to fetch the date and time from the server
+
+    /**
+     * Method to fetch the date and time from the server
+     * @return
+     * @throws Exception
+     */
     public static String fetchTimeFromServer() throws Exception {
-        String urlString = "http://worldclockapi.com/api/json/utc/now";
+        String urlString = "https://worldtimeapi.org/api/timezone/utc"; // unstable "http://worldclockapi.com/api/json/utc/now";
         URL url = new URL(urlString);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
@@ -41,7 +52,10 @@ public class TimeQuery {
         return content.toString();
     }
 
-    // public static void main(String[] args) {
+    /**
+     * This method queries a server for current date/time
+     * and stores variables with local and utc data.
+     */
     public static void checkCurrentDateTime() {
         try {
             // Fetch the time data from the server
@@ -49,10 +63,10 @@ public class TimeQuery {
 
             // Parse the JSON response
             JSONObject jsonObject = new JSONObject(jsonResponse);
-            String utcDateTimeString = jsonObject.getString("currentDateTime");
+            String utcDateTimeString = jsonObject.getString("datetime"); //currentDateTime
 
             // Convert the string to ZonedDateTime (UTC)
-            utcTime = ZonedDateTime.parse(utcDateTimeString, DateTimeFormatter.ISO_DATE_TIME); //ISO_INSTANT.withZone(ZoneId.systemDefault()))
+            utcTime = ZonedDateTime.parse(utcDateTimeString, DateTimeFormatter.ISO_DATE_TIME);
 
             // Convert to Local Time (System's Time Zone)
             localTime = utcTime.withZoneSameInstant(ZoneId.systemDefault());
@@ -61,6 +75,12 @@ public class TimeQuery {
             e.printStackTrace();
         }
     }
+
+
+
+    /**
+     * Method to display the output in a formatted response
+     */
     static void displayCurrDayTimeLocUtc() {
         // Display UTC time
         System.out.println("UTC Time: " + utcTime.format(dtf));
@@ -69,6 +89,11 @@ public class TimeQuery {
         System.out.println();
     }
 
+
+
+    /**
+     * Method to display the output as a JSON
+     */
     static void displayCurrDayTimeLocalInJsonFormat() {
         // Create a JSON object
         JSONObject jsonObject = new JSONObject();

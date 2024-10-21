@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Serializable class to represent a Task
+/**Serializable class to represent a Task
+ * @author Guilherme de Magalhaes Andrade
+ */
 class Task implements Serializable {
     private static final long serialVersionUID = 1L;
     private String description;

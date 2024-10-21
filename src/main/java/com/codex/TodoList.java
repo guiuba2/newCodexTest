@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**This class has methods to perform a simple todo list.
+ * Data is persisted thanks to Serializable interface
+ * but new users must provide a local address in their PC
+ * reassigning variable "filename" in method showMenu() with it.
+ * @author Guilherme de Magalhaes Andrade
+ */
 public class TodoList implements Serializable {
     private static final long serialVersionUID = 1L;
     private List<Task> tasks;
@@ -13,13 +19,19 @@ public class TodoList implements Serializable {
         tasks = new ArrayList<>();
     }
 
-    // Add a task
+    /**
+     * Add a task
+     * @param description
+     */
     public void addTask(String description) {
         tasks.add(new Task(description));
         System.out.println("Task added successfully.");
     }
 
-    // Remove a task
+    /**
+     * Remove a task
+     * @param taskNumber
+     */
     public void removeTask(int taskNumber) {
         if (taskNumber > 0 && taskNumber <= tasks.size()) {
             tasks.remove(taskNumber - 1);
@@ -41,21 +53,36 @@ public class TodoList implements Serializable {
         }
     }
 
-    // Save the task list to a file
+    /**
+     * Save the task list to a file
+     * @param filename
+     * @throws IOException
+     */
     public void saveTasksToFile(String filename) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
             oos.writeObject(this);
         }
     }
 
-    // Load the task list from a file
+    /**
+     * Load the task list from a file
+     * @param filename
+     * @return
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public static TodoList loadTasksFromFile(String filename) throws IOException, ClassNotFoundException {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
             return (TodoList) ois.readObject();
         }
     }
 
-    public static void showMenu() { //main(String[] args)
+
+
+    /**
+     * This method shows the related menu to user
+     */
+    public static void showMenu() {
         Scanner scanner = new Scanner(System.in);
         TodoList todoList = new TodoList();
         String filename = "D:\\variousTests\\tasks.ser";

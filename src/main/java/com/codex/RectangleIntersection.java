@@ -3,6 +3,13 @@ package com.codex;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * This class is subdivided into the functionalities check if there is
+ * an intersection between two rectangles and  compute the area
+ * of intersection of two rectangles.
+ *
+ * @author Guilherme de Magalhaes Andrade
+ */
 public class RectangleIntersection {
 
     // Define a Rectangle class to represent a rectangle by its two corners
@@ -17,7 +24,9 @@ public class RectangleIntersection {
         }
     }
 
-    // Method to check if there is intersection between two rectangles
+    /**
+     * Method to check if there is intersection between two rectangles
+     */
     static void checkIfTwoRectanglesIntersect() {
         //capture rectangles from input
         List<Rectangle> rectanglesList = captureRectangleCoordinates();
@@ -27,7 +36,9 @@ public class RectangleIntersection {
         System.out.println("Result: " + intersects(rect1, rect2) + "\n");
     }
 
-    // Method to calculate the area of intersection between two rectangles
+    /**
+     * Method to calculate the area of intersection between two rectangles
+     */
     static void computeAreaOfIntersection() {
 
         //capture rectangles from input
@@ -89,7 +100,12 @@ public class RectangleIntersection {
         return null;
     }
 
-    // Method to check if two rectangles intersect
+    /**
+     * Method to check if two rectangles intersect
+     * @param rect1
+     * @param rect2
+     * @return
+     */
     public static boolean intersects(Rectangle rect1, Rectangle rect2) {
         // Check if one rectangle is completely to the left or right of the other
         if (rect1.x2 < rect2.x1 || rect2.x2 < rect1.x1) {

@@ -2,6 +2,9 @@ package com.codex;
 
 import java.util.Scanner;
 
+/** Program main class, offers a menu featuring 6 different tasks + quit option.
+ *  @author Guilherme de Magalhaes Andrade
+ */
 public class Main {
     Scanner scan = new Scanner(System.in);
     boolean quit = false;
@@ -16,7 +19,7 @@ public class Main {
 
 
     }
-
+    // Method that shows options menu and delegates tasks to dedicated classes according to user choice
     public void showOptions() {
         System.out.println(
                 """

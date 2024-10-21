@@ -1,8 +1,20 @@
 package com.codex;
 
 import java.util.*;
+
+/** This class has methods to validate CNPJ numbers
+ *  (Cadastro Nacional da Pessoa Jurídica)
+ *  The CNPJ is a number made up of 14 digits, the last two of which
+ *  are called verification digits (DV). Each DV is calculated based
+ *  on the previous digits and together they serve to validate
+ *  the CNPJ number as a whole.
+ *  @author Guilherme de Magalhaes Andrade
+ */
 public class CnpjValidator {
 
+    /**This method asks user to enter a CNPJ number in order to validate it
+     * @param scan
+     */
     public static void validateCnpj(Scanner scan) {
         System.out.println("Please enter a CNPJ number to validate:");
         String cnpj = scan.next();
@@ -16,6 +28,11 @@ public class CnpjValidator {
         System.out.println();
     }
 
+    /**
+     *
+     * @param cnpj
+     * @return
+     */
     public static boolean isValidCNPJ(String cnpj) {
         // Remove special characters (dots, slashes, hyphens)
 

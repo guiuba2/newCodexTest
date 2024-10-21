@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.codex","l":"CnpjValidator"},{"p":"com.codex","l":"Main"},{"p":"com.codex","l":"RectangleIntersection"},{"p":"com.codex","l":"TimeQuery"},{"p":"com.codex","l":"TodoList"}];updateSearchResults();
