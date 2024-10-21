@@ -1,7 +1,7 @@
 <h2>Hello! Welcome to my Codex Utilities pre-qualification test (v1.10).</h2>
 <p>This repository contains a program written in Java, with the Gradle build tool module. This means that once downloaded and opened in an IDE, the program will automatically implement the necessary dependencies and will be (almost) ready to work. As for the "Simple Todo List" new users must provide a local address in their PC reassigning variable "filename" in method showMenu() with it in order to persist the tasks between executions. There is an interactive menu with the 6 test question options in the main class. 
 <br>Below are screenshots of questions 1 to 6 for demonstration purposes.  
-<br>The solution to question number 7 (Entity Relationship Diagram) is available right here in the README, a little further down.  
+<br>The solution to question number 7 (Entity Relationship Diagram - Simple Order Manager) is available right here in the README, a little further down.  
 <br>I hope you like it, I did everything with great dedication and care, thank you! : )</p>
 
 ---
@@ -44,6 +44,11 @@
 ![image](https://github.com/user-attachments/assets/9a7b4e4f-70ec-4c51-9bac-a9bcd6e9b1a8)
 
 ---
+
+><h4>7 - Entity Relationship Diagram - Simple Order Manager (SQL)</h4>
+
+>Client Table 
+
 
 
 
